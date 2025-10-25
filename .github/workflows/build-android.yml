@@ -9,27 +9,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      PROJECT_DIR: mobile   # ← set to your Flutter folder name (e.g., "mobile")
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Detect whether this repo actually has a Flutter project
       - name: Detect Flutter project
         id: detect
         shell: bash
         run: |
-          if [[ -f "pubspec.yaml" ]]; then
+          if [[ -f "$PROJECT_DIR/pubspec.yaml" ]]; then
             echo "build=true" >> "$GITHUB_OUTPUT"
           else
             echo "build=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # Short-circuit if no Flutter project (keeps the workflow green)
       - name: No Flutter project found — skipping build
         if: steps.detect.outputs.build == 'false'
-        run: |
-          echo "No pubspec.yaml in repo. This workflow is for Flutter/Android builds."
-          echo "Skipping without error."
+        run: echo "No Flutter project in $PROJECT_DIR; skipping."
 
       - name: Set up Java 17
         if: steps.detect.outputs.build == 'true'
@@ -65,14 +64,17 @@ jobs:
 
       - name: Flutter pub get
         if: steps.detect.outputs.build == 'true'
+        working-directory: ${{ env.PROJECT_DIR }}
         run: flutter pub get
 
       - name: Enable Android (no-op if already)
         if: steps.detect.outputs.build == 'true'
+        working-directory: ${{ env.PROJECT_DIR }}
         run: flutter config --enable-android
 
       - name: Build APK (release)
         if: steps.detect.outputs.build == 'true'
+        working-directory: ${{ env.PROJECT_DIR }}
         run: flutter build apk --release
 
       - name: Upload APK artifact
@@ -80,5 +82,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: ${{ env.PROJECT_DIR }}/build/app/outputs/flutter-apk/app-release.apk
+
 
