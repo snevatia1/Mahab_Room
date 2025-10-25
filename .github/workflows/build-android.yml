@@ -9,10 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      ANDROID_SDK_ROOT: ${{ runner.temp }}/android-sdk
-      JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,8 +30,10 @@ jobs:
             cmdline-tools;latest
 
       - name: Accept SDK licenses
+        shell: bash
         run: |
-          yes | "${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager" --licenses
+          SDKROOT="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
+          yes | "${SDKROOT}/cmdline-tools/latest/bin/sdkmanager" --licenses
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -47,8 +45,7 @@ jobs:
       - name: Flutter pub get
         run: flutter pub get
 
-      # Optional: ensure Android is enabled (no-op if already)
-      - name: Enable Android
+      - name: Enable Android (no-op if already enabled)
         run: flutter config --enable-android
 
       - name: Build APK (release)
