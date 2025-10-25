@@ -8,21 +8,38 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Only run if this repo has a Flutter/Android project
-    if: ${{ hashFiles('**/pubspec.yaml') != '' || hashFiles('**/android/gradlew') != '' }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Detect whether this repo actually has a Flutter project
+      - name: Detect Flutter project
+        id: detect
+        shell: bash
+        run: |
+          if [[ -f "pubspec.yaml" ]]; then
+            echo "build=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "build=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Short-circuit if no Flutter project (keeps the workflow green)
+      - name: No Flutter project found — skipping build
+        if: steps.detect.outputs.build == 'false'
+        run: |
+          echo "No pubspec.yaml in repo. This workflow is for Flutter/Android builds."
+          echo "Skipping without error."
+
       - name: Set up Java 17
+        if: steps.detect.outputs.build == 'true'
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
-          # (Removed: cache: gradle) → avoids scanning for gradle files in non-Android repos
 
       - name: Install Android SDK (cmdline-tools)
+        if: steps.detect.outputs.build == 'true'
         uses: android-actions/setup-android@v3
         with:
           packages: |
@@ -32,12 +49,14 @@ jobs:
             cmdline-tools;latest
 
       - name: Accept SDK licenses
+        if: steps.detect.outputs.build == 'true'
         shell: bash
         run: |
           SDKROOT="${ANDROID_SDK_ROOT:-$ANDROID_HOME}"
           yes | "${SDKROOT}/cmdline-tools/latest/bin/sdkmanager" --licenses
 
-      - name: Set up Flutter
+      - name: Set up Flutter (stable)
+        if: steps.detect.outputs.build == 'true'
         uses: subosito/flutter-action@v2
         with:
           flutter-version: "stable"
@@ -45,15 +64,19 @@ jobs:
           cache: true
 
       - name: Flutter pub get
+        if: steps.detect.outputs.build == 'true'
         run: flutter pub get
 
-      - name: Enable Android (no-op if already enabled)
+      - name: Enable Android (no-op if already)
+        if: steps.detect.outputs.build == 'true'
         run: flutter config --enable-android
 
       - name: Build APK (release)
+        if: steps.detect.outputs.build == 'true'
         run: flutter build apk --release
 
       - name: Upload APK artifact
+        if: steps.detect.outputs.build == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
