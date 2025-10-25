@@ -1,0 +1,30 @@
+[
+  {
+    "code": "A",
+    "name": "Block A"
+  },
+  {
+    "code": "B",
+    "name": "Block B"
+  },
+  {
+    "code": "D",
+    "name": "Block D"
+  },
+  {
+    "code": "New C",
+    "name": "Block New C"
+  },
+  {
+    "code": "New E",
+    "name": "Block New E"
+  },
+  {
+    "code": "Old C",
+    "name": "Block Old C"
+  },
+  {
+    "code": "Old E",
+    "name": "Block Old E"
+  }
+]

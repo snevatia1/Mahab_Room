@@ -1,0 +1,50 @@
+{
+  "MEMBER (Double Occupancy)": {
+    "regular": 5250.0,
+    "special": 6300.0
+  },
+  "Extra Adult (10 & above 10)": {
+    "regular": 3622.0,
+    "special": 4323.0
+  },
+  "Extra Child (5 & above 5 upto 10)": {
+    "regular": 1811.0,
+    "special": 2161.0
+  },
+  "MEMBER (Single Occupancy in Double room)": {
+    "regular": 4200.0,
+    "special": 5040.0
+  },
+  "MEMBER (Single Occupancy in single room)": {
+    "regular": 2625.0,
+    "special": 3150.0
+  },
+  "MEMBER Senior Citizen (65 & above) Double Occupancy": {
+    "regular": 4725.0,
+    "special": 5670.0
+  },
+  "Extra Adult (Senior Citizen)": {
+    "regular": 1890.0,
+    "special": 2268.0
+  },
+  "MEMBER (Senior Citizen) Single Occupancy in double room": {
+    "regular": 3780.0,
+    "special": 4536.0
+  },
+  "MEMBER (Senior Citizen) Single Occupancy in Single room": {
+    "regular": 2363.0,
+    "special": 2835.0
+  },
+  "TEMPORARY MEMBER (Double Occupancy)": {
+    "regular": 9580.0,
+    "special": 11449.0
+  },
+  "TEMPORARY MEMBER (Single Occupancy in double room)": {
+    "regular": 7710.0,
+    "special": 9228.0
+  },
+  "TEMPORARY MEMBER (Single Occupancy in single room)": {
+    "regular": 4790.0,
+    "special": 5724.0
+  }
+}

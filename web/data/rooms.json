@@ -1,0 +1,314 @@
+[
+  {
+    "block": "A",
+    "room_no": "A-1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-2",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-3",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-4",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-5",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-6",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-7",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-8",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "A",
+    "room_no": "A-9",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-2",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-3",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-4",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-5",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-6",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-7",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-8",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B-9",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-2",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-3",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-4",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-5",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old C",
+    "room_no": "C-6",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New C",
+    "room_no": "C-7",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New C",
+    "room_no": "C-8",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New C",
+    "room_no": "C-9",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New C",
+    "room_no": "C-10",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "D",
+    "room_no": "D-1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "D",
+    "room_no": "D-2",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "D",
+    "room_no": "D-3",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "D",
+    "room_no": "D-4",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old E",
+    "room_no": "E-1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old E",
+    "room_no": "E-2",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "Old E",
+    "room_no": "E-3",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New E",
+    "room_no": "E-4",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New E",
+    "room_no": "E-5",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New E",
+    "room_no": "E-6",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  },
+  {
+    "block": "New E",
+    "room_no": "E-7",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": false
+  }
+]

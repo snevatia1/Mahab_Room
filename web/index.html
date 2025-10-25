@@ -1,0 +1,53 @@
+<!doctype html><html><head>
+<meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>Club Mahabaleshwar — Booking Demo</title>
+<link rel='stylesheet' href='./styles/globals.css'/>
+</head><body>
+<div class='app'>
+  <div class='left'>
+    <div class='header-banner' id='banner'></div>
+    <div id='calendar' class='calendar'></div>
+  </div>
+  <div class='right'>
+    <div id='otpGate' class='lock'>
+      <div><strong>OTP</strong></div>
+      <label>Membership # <input id='memNo'/></label>
+      <button id='sendOtp'>Send OTP</button>
+      <div id='otpMsg' style='font-size:12px;color:#666;margin-top:6px;'></div>
+      <div id='otpEnter' style='display:none;margin-top:8px;'>
+        <label>Enter OTP <input id='otpVal'/></label>
+        <button id='verifyOtp'>Verify</button>
+      </div>
+    </div>
+    <div id='memberName' style='display:none;margin-bottom:8px;'></div>
+    <div id='controls' style='display:none;'>
+      <div>
+        <label>Check-in <input type='date' id='inDate'/></label>
+        <label>Check-out <input type='date' id='outDate'/></label>
+        <div style='font-size:12px;color:#666'>UTC: <span id='utcSpan'></span></div>
+      </div>
+      <h4>Party</h4>
+      <div id='party'>
+        Members <input type='number' id='p_mem' min='0' value='0' style='width:60px'/>
+        Seniors <input type='number' id='p_sen' min='0' value='0' style='width:60px'/><br/>
+        Children &lt;10 <input type='number' id='p_c10' min='0' value='0' style='width:60px'/>
+        Children 10–21 <input type='number' id='p_c21' min='0' value='0' style='width:60px'/><br/>
+        Temp (Adults) <input type='number' id='p_ta' min='0' value='0' style='width:60px'/>
+        Temp (5–10) <input type='number' id='p_tc' min='0' value='0' style='width:60px'/>
+        <div style='font-size:12px;color:#666'>Children (11–21) and Parents of both spouses are Dependants, billed as Temporary Members.</div>
+      </div>
+      <h4>Filters</h4>
+      <div id='filters'>
+        <label><input type='checkbox' id='f_wc'/> Wheelchair</label>
+        <label><input type='checkbox' id='f_pet'/> Pet-friendly</label>
+        <label><input type='checkbox' id='f_ac'/> AC</label>
+        <label><input type='checkbox' id='f_single'/> Single</label>
+        <label><input type='checkbox' id='f_quad'/> 4 beds</label>
+      </div>
+      <div id='avail'></div>
+      <div class='summary' id='summary'></div>
+    </div>
+  </div>
+</div>
+<script src='./src/app.js'></script>
+</body></html>
