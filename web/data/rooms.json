@@ -1,0 +1,34 @@
+[
+  {
+    "block": "A",
+    "room_no": "A1",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": true
+  },
+  {
+    "block": "A",
+    "room_no": "A2",
+    "type": "single",
+    "wheelchair": false,
+    "pet": true,
+    "ac": false
+  },
+  {
+    "block": "B",
+    "room_no": "B1",
+    "type": "quad",
+    "wheelchair": true,
+    "pet": false,
+    "ac": true
+  },
+  {
+    "block": "E",
+    "room_no": "E5",
+    "type": "double",
+    "wheelchair": false,
+    "pet": false,
+    "ac": true
+  }
+]
